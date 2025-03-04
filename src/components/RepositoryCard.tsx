@@ -57,7 +57,7 @@ export default function RepositoryCard({ repository }: RepositoryCardProps) {
         <H4>{repository.name}</H4>
 
         <RepoInfo>
-          <SmText>
+          <SmText style={{fontWeight: "bold", color: "rgb(46, 45, 45)"}}>
             <MdCode /> {repository.language || 'Unknown Language'}
           </SmText>
           <RepoDescription>

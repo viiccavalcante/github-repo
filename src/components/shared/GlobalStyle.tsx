@@ -23,22 +23,6 @@ const ColumnContainer = styled.div`
   }
 `;
 
-const RowContainer = styled.div`
-  width: 80rem;
-  max-width: 100%;
-  padding: 2rem;
-  background-color: white;
-  border: 3px solid rgba(88, 88, 88, 0.1);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1rem;
-
-  @media (max-width: 400px) {
-    width: 90%;
-  }
-`;
-
 const Card = styled.div`
   background-color: white;
   padding: 2rem;
@@ -85,6 +69,19 @@ const Select = styled.select`
     border: 3px solid rgb(14, 13, 13);
   }
 `;
+
+const Option = styled.option`
+  background: white;
+  color: black;
+  font-size: 1em;
+  padding: 0.5rem;
+  appearance: none;
+
+  &:hover, &:active {
+    background: rgb(230, 230, 230);
+  }
+`;
+
 
 const Button = styled.button`
   width: 100%;
@@ -152,7 +149,6 @@ const H4 = styled.h4`
 export {
   GlobalStyle,
   ColumnContainer,
-  RowContainer,
   Title,
   Card,
   BgButton,
@@ -162,6 +158,7 @@ export {
   Footer,
   RotatedArrow,
   Select,
+  Option,
   SmText,
   H4,
 };

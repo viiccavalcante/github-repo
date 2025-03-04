@@ -16,7 +16,7 @@ const Column = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  border: 1px solid rgba(68, 67, 67, 0.1);
+  border-right: 2px solid rgba(37, 37, 37, 0.1);
 
   @media (max-width: 768px) {
     width: 100%;
