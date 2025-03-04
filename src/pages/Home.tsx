@@ -1,6 +1,6 @@
-import { useForm } from 'react-hook-form'
-import { useNavigate } from 'react-router-dom'
-import { styled } from 'styled-components'
+import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import { styled } from 'styled-components';
 import {
   ColumnContainer,
   Footer,
@@ -8,7 +8,7 @@ import {
   Title,
   RotatedArrow,
   BgButton,
-} from '../components/shared/GlobalStyle'
+} from '../components/shared/GlobalStyle';
 
 const Wrapper = styled.div`
   display: flex;
@@ -16,18 +16,18 @@ const Wrapper = styled.div`
   justify-content: center;
   min-height: 95vh;
   width: 100%;
-`
+`;
 
 export function Home() {
-  const navigate = useNavigate()
-  const { register, handleSubmit } = useForm<{ searchText: string }>()
+  const navigate = useNavigate();
+  const { register, handleSubmit } = useForm<{ searchText: string }>();
 
   const onSubmit = (data: { searchText: string }) => {
-    const username = data.searchText.trim()
+    const username = data.searchText.trim();
     if (username) {
-      navigate(`/profile/${username}`)
+      navigate(`/profile/${username}`);
     }
-  }
+  };
 
   return (
     <Wrapper>
@@ -47,5 +47,5 @@ export function Home() {
         </Footer>
       </ColumnContainer>
     </Wrapper>
-  )
+  );
 }

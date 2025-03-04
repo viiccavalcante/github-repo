@@ -16,4 +16,4 @@ createRoot(document.getElementById('root')!).render(
       </main>
     </Router>
   </StrictMode>
-)
+);

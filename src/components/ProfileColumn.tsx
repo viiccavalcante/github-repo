@@ -1,11 +1,11 @@
-import styled from 'styled-components'
-import { User } from '../types/User'
-import { RotatedArrow, SmText, H4, MdButton } from './shared/GlobalStyle'
+import styled from 'styled-components';
+import { User } from '../types/User';
+import { RotatedArrow, SmText, H4, MdButton } from './shared/GlobalStyle';
 
 interface ProfileColumnProps {
-  user?: User
-  loadingUser: boolean
-  errorUser?: string | null
+  user?: User;
+  loadingUser: boolean;
+  errorUser?: string | null;
 }
 
 const Column = styled.div`
@@ -23,7 +23,7 @@ const Column = styled.div`
     min-height: auto;
     padding: 1rem;
   }
-`
+`;
 
 const Avatar = styled.img`
   width: 120px;
@@ -31,7 +31,7 @@ const Avatar = styled.img`
   border-radius: 50%;
   border: 2px solid white;
   margin-bottom: 1rem;
-`
+`;
 
 const Name = styled.h3`
   font-size: 1.4rem;
@@ -39,7 +39,7 @@ const Name = styled.h3`
   margin-bottom: 0.5rem;
   color: rgb(14, 13, 13);
   text-align: center;
-`
+`;
 
 export default function ProfileColumn({
   user,
@@ -73,5 +73,5 @@ export default function ProfileColumn({
         </>
       )}
     </Column>
-  )
+  );
 }

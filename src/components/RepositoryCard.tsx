@@ -1,11 +1,11 @@
-import styled from 'styled-components'
-import { Repository } from '../types/Repository'
-import { H4, RotatedArrow, SmButton, SmText } from './shared/GlobalStyle'
-import { MdCode } from 'react-icons/md'
+import styled from 'styled-components';
+import { Repository } from '../types/Repository';
+import { H4, RotatedArrow, SmButton, SmText } from './shared/GlobalStyle';
+import { MdCode } from 'react-icons/md';
 
 type RepositoryCardProps = {
-  repository: Repository
-}
+  repository: Repository;
+};
 
 const Card = styled.div`
   flex-direction: column;
@@ -21,14 +21,14 @@ const Card = styled.div`
     transform: translateY(-5px);
     border: 3px solid rgb(14, 13, 13);
   }
-`
+`;
 
 const RepoInfo = styled.div`
   flex-direction: column;
   display: flex;
   gap: 0.5rem;
   width: 100%;
-`
+`;
 
 const RepoDescription = styled(SmText)`
   display: -webkit-box;
@@ -37,13 +37,13 @@ const RepoDescription = styled(SmText)`
   overflow: hidden;
   text-overflow: ellipsis;
   color: rgba(0, 0, 0, 0.7);
-`
+`;
 
 const UpdatedDate = styled.p`
   font-size: 0.9rem;
   text-align: center;
   color: rgb(105, 104, 104);
-`
+`;
 
 export default function RepositoryCard({ repository }: RepositoryCardProps) {
   return (
@@ -58,7 +58,7 @@ export default function RepositoryCard({ repository }: RepositoryCardProps) {
 
         <RepoInfo>
           <SmText>
-            <MdCode/> {repository.language || 'Unknown Language'}
+            <MdCode /> {repository.language || 'Unknown Language'}
           </SmText>
           <RepoDescription>
             {repository.description || 'No description available'}
@@ -73,5 +73,5 @@ export default function RepositoryCard({ repository }: RepositoryCardProps) {
         </UpdatedDate>
       </a>
     </Card>
-  )
+  );
 }
