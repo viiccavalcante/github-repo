@@ -8,7 +8,7 @@ import {
   Title,
   RotatedArrow,
   BgButton,
-} from '../components/shared/GlobalStyle';
+} from '../components/shared/GlobalStyles';
 
 const Wrapper = styled.div`
   display: flex;

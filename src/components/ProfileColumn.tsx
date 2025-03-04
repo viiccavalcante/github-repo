@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { User } from '../types/User';
-import { RotatedArrow, SmText, H4, MdButton } from './shared/GlobalStyle';
+import { RotatedArrow, SmText, H4, MdButton } from './shared/GlobalStyles';
 
 interface ProfileColumnProps {
   user?: User;

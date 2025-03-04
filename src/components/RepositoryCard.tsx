@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Repository } from '../types/Repository';
-import { H4, RotatedArrow, SmButton, SmText } from './shared/GlobalStyle';
+import { H4, RotatedArrow, SmButton, SmText } from './shared/GlobalStyles';
 import { MdCode } from 'react-icons/md';
 
 type RepositoryCardProps = {

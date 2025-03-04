@@ -1,13 +1,13 @@
 import { useParams } from 'react-router-dom';
-import { useGitHubUser } from '../hooks/githubUser';
-import { useGitHubRepos } from '../hooks/GitHubRepos';
+import { useGitHubUser } from '../services/useGitHubUser';
+import { useGitHubRepos } from '../services/useGitHubRepos';
 import { useState } from 'react';
 import {
   Input,
   Select,
   SmText,
   Option,
-} from '../components/shared/GlobalStyle';
+} from '../components/shared/GlobalStyles';
 import styled from 'styled-components';
 import ProfileColumn from '../components/ProfileColumn';
 import RepositoryCard from '../components/RepositoryCard';
