@@ -146,6 +146,7 @@ const H4 = styled.h4`
   font-weight: semibold;
   color: rgb(14, 13, 13);
   margin-bottom: 1rem;
+  text-align: center;
 `
 
 export {
