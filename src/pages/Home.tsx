@@ -6,8 +6,8 @@ import {
   Footer,
   Input,
   Title,
-  MdButton,
   RotatedArrow,
+  BgButton,
 } from '../components/shared/GlobalStyle'
 
 const Wrapper = styled.div`
@@ -37,9 +37,9 @@ export function Home() {
         <form onSubmit={handleSubmit(onSubmit)} style={{ width: '90%' }}>
           <Input {...register('searchText')} placeholder="Username" />
 
-          <MdButton type="submit" style={{ marginTop: '10px' }}>
-            Search <RotatedArrow size={20} />
-          </MdButton>
+          <BgButton type="submit" style={{ marginTop: '10px' }}>
+            Search <RotatedArrow size={25} />
+          </BgButton>
         </form>
 
         <Footer>

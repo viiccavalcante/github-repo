@@ -86,16 +86,14 @@ const Select = styled.select`
   }
 `
 
-const MdButton = styled.button`
+const Button = styled.button`
   width: 100%;
   background-color: rgb(14, 13, 13);
   color: white;
-  padding: 0.75rem;
   border: none;
   cursor: pointer;
   transition: background-color 0.2s;
   font-weight: semibold;
-  font-size: 1.5em;
 
   &:hover {
     background-color: rgb(32, 32, 32);
@@ -105,23 +103,20 @@ const MdButton = styled.button`
   }
 `
 
-const SmButton = styled.button`
-  width: 100%;
-  background-color: rgb(14, 13, 13);
-  color: white;
+const BgButton = styled(Button)`
   padding: 0.75rem;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  font-weight: semibold;
-  font-size: 1em;
+  font-size: 1.5em;
+`
 
-  &:hover {
-    background-color: rgb(32, 32, 32);
-    svg {
-      transform: scale(1.2);
-    }
-  }
+const MdButton = styled(Button)`
+  padding: 0.7rem;
+  font-size: 1em;
+`
+
+const SmButton = styled(Button)`
+	width: 100%;
+  padding: 0.5rem;
+  font-size: 0.8em;
 `
 
 const Footer = styled.div`
@@ -146,12 +141,20 @@ const SmText = styled.p`
   color: rgb(14, 13, 13);
 `
 
+const H4 = styled.h4`
+  font-size: 1rem;
+  font-weight: semibold;
+  color: rgb(14, 13, 13);
+  margin-bottom: 1rem;
+`
+
 export {
   GlobalStyle,
   ColumnContainer,
   RowContainer,
   Title,
   Card,
+	BgButton,
   MdButton,
   SmButton,
   Input,
@@ -159,4 +162,5 @@ export {
   RotatedArrow,
   Select,
   SmText,
+	H4
 }

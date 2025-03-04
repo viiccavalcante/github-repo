@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { User } from '../types/User'
-import { SmButton, RotatedArrow, SmText } from './shared/GlobalStyle'
+import { RotatedArrow, SmText, H4, MdButton } from './shared/GlobalStyle'
 
 interface ProfileColumnProps {
   user?: User
@@ -38,13 +38,7 @@ const Name = styled.h3`
   font-weight: bold;
   margin-bottom: 0.5rem;
   color: rgb(14, 13, 13);
-`
-
-const Username = styled.h4`
-  font-size: 1rem;
-  font-weight: semibold;
-  color: rgb(14, 13, 13);
-  margin-bottom: 1rem;
+  text-align: center;
 `
 
 export default function ProfileColumn({
@@ -67,14 +61,14 @@ export default function ProfileColumn({
 
           <Name>{user.name || 'No Name'}</Name>
 
-          <Username>@{user.login}</Username>
+          <H4>@{user.login}</H4>
 
           <SmText>{user.bio || 'No bio available.'}</SmText>
 
           <a href={user.html_url} target="_blank">
-            <SmButton>
+            <MdButton>
               Open Profile <RotatedArrow size={20} />
-            </SmButton>
+            </MdButton>
           </a>
         </>
       )}
