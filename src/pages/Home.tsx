@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import { styled } from 'styled-components';
 import {
   ColumnContainer,
-  Footer,
   Input,
   Title,
   RotatedArrow,
   BgButton,
+  NavigateButton,
 } from '../components/shared/GlobalStyles';
 
 const Wrapper = styled.div`
@@ -29,6 +29,10 @@ export function Home() {
     }
   };
 
+  const handleNavigate = () => {
+    navigate('/about-me');
+  };
+
   return (
     <Wrapper>
       <ColumnContainer>
@@ -42,9 +46,7 @@ export function Home() {
           </BgButton>
         </form>
 
-        <Footer>
-          <a href="/about-me">About Me</a>
-        </Footer>
+        <NavigateButton onClick={handleNavigate}>About Me</NavigateButton>
       </ColumnContainer>
     </Wrapper>
   );

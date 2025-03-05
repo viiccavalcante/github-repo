@@ -2,11 +2,12 @@ import { styled } from 'styled-components';
 import {
   ColumnContainer,
   Title,
-  Footer,
   MdButton,
   SmButton,
   RotatedArrow,
+  NavigateButton,
 } from '../components/shared/GlobalStyles';
+import { useNavigate } from 'react-router-dom';
 
 const Wrapper = styled.div`
   display: flex;
@@ -36,11 +37,16 @@ const ButtonContainer = styled.div`
 `;
 
 export function AboutMe() {
+  const navigate = useNavigate();
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = '/src/assets/victoriaCavalcante.pdf';
     link.download = 'victoriaCavalcante.pdf';
     link.click();
+  };
+
+  const handleNavigate = () => {
+    navigate('/');
   };
 
   return (
@@ -81,10 +87,7 @@ export function AboutMe() {
           </a>
         </ButtonContainer>
 
-        <Footer>
-          <a href="/">Back to the project</a>
-        </Footer>
-
+        <NavigateButton onClick={handleNavigate}>Back to the project</NavigateButton>
       </ColumnContainer>
     </Wrapper>
   );

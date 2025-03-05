@@ -116,21 +116,19 @@ const SmButton = styled(Button)`
   font-size: 0.8em;
 `;
 
-const Footer = styled.div`
+const NavigateButton = styled.button`
   text-align: center;
   border: 3px solid rgba(68, 67, 67, 0.12);
   padding: 0.5rem;
   border-radius: 1px;
   margin: 1rem auto;
+  background-color: white;
+  font-weight: bold;
+  font-size: 1em;
+  color:rgb(14, 13, 13);
 
   &:hover {
     border: 3px solid rgb(14, 13, 13);
-  }
-
-  a {
-    color: rgb(51, 53, 52);
-    font-weight: bold;
-    text-decoration: none;
   }
 `;
 
@@ -163,7 +161,7 @@ export {
   MdButton,
   SmButton,
   Input,
-  Footer,
+  NavigateButton,
   RotatedArrow,
   Select,
   Option,
