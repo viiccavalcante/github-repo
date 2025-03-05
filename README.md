@@ -1,54 +1,25 @@
-# React + TypeScript + Vite
+# GitHub Repositories List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a tool that allows users to list public GitHub repositories. You can filter the list by programming language or repository name.
 
-Currently, two official plugins are available:
+### Features
+- **Filter by Language**
+- **Filter by Repository Name**
+- **Personal "About Me" Page**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Layout
+  ![image](https://github.com/user-attachments/assets/b6cdbcca-58f2-4b77-b8ba-a3962cea80e9)
 
-## Expanding the ESLint configuration
+### Deployment
+The app is deployed on Vercel with CI/CD set up via GitHub Actions.  
+You can access the deployed app at: [https://github-repo-alpha.vercel.app/](https://github-repo-alpha.vercel.app/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. **Clone the repository**  
+   Run the following command to clone the project:  
+   ```bash
+   git clone https://github.com/viiccavalcante/github-repo.git
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Improvements 
+Use GraphQL API
