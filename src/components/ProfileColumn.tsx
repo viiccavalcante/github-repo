@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 import { User } from '../types/User';
-import { RotatedArrow, SmText, H4, MdButton } from './shared/GlobalStyles';
+import {
+  RotatedArrow,
+  SmText,
+  H4,
+  MdButton,
+  NavigateButton,
+} from './shared/GlobalStyles';
+import { useNavigate } from 'react-router-dom';
 
 interface ProfileColumnProps {
   user?: User;
@@ -46,6 +53,11 @@ export default function ProfileColumn({
   loadingUser,
   errorUser,
 }: ProfileColumnProps) {
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate('/');
+  };
+
   return (
     <Column>
       <h2 style={{ color: 'rgb(14, 13, 13)' }}>GitHub Profile</h2>
@@ -70,6 +82,8 @@ export default function ProfileColumn({
               Open Profile <RotatedArrow size={20} />
             </MdButton>
           </a>
+
+          <NavigateButton onClick={handleNavigate}>Back</NavigateButton>
         </>
       )}
     </Column>
