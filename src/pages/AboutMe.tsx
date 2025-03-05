@@ -40,7 +40,7 @@ export function AboutMe() {
   const navigate = useNavigate();
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/src/assets/victoriaCavalcante.pdf';
+    link.href = '/assets/victoriaCavalcante.pdf';
     link.download = 'victoriaCavalcante.pdf';
     link.click();
   };
