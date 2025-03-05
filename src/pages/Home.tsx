@@ -43,7 +43,7 @@ export function Home() {
         </form>
 
         <Footer>
-          <a href="#">About Me</a>
+          <a href="/about-me">About Me</a>
         </Footer>
       </ColumnContainer>
     </Wrapper>

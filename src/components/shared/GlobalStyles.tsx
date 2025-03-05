@@ -118,16 +118,24 @@ const SmButton = styled(Button)`
 
 const Footer = styled.div`
   text-align: center;
-  margin-top: 1rem;
+  border: 3px solid rgba(68, 67, 67, 0.12);
+  padding: 0.5rem;
+  border-radius: 1px;
+  margin: 1rem auto;
+
+  &:hover {
+    border: 3px solid rgb(14, 13, 13);
+  }
 
   a {
     color: rgb(51, 53, 52);
+    font-weight: bold;
     text-decoration: none;
   }
 `;
 
 const RotatedArrow = styled(MdArrowForward)`
-  transform: rotate(-70deg);
+  transform: rotate(-45deg);
   transition: transform 0.2s ease-in-out;
 `;
 
