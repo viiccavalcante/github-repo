@@ -26,7 +26,11 @@ export function useGitHubRepos(username: string, language?: string) {
 
         setAllRepos(data);
         setAllLanguages(Array.from(new Set(data.map((repo) => repo.language))));
-        setRepos(data);
+        
+        setRepos(data.sort((a: Repository, b: Repository) =>
+          new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
+        ));
+        
       } catch (err) {
         setErrorRepos('Error to find repos from user.');
       } finally {
