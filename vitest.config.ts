@@ -6,4 +6,9 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: './test/setup',
   },
+  resolve: {
+    alias: {
+      crypto: 'crypto-browserify',
+    },
+  },
 });
