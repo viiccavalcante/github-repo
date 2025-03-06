@@ -23,9 +23,6 @@ jobs:
       - name: Install dependencies
         run: npm install
       
-      - name: Install polyfill
-        run: node -r react-native-get-random-values/shim.js node_modules/vitest/vitest.mjs
-
       - name: Run tests
         run: npm test 
 
